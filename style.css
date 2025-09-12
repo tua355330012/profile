@@ -11,7 +11,7 @@ header {
   display: flex; 
   justify-content: space-between;
   align-items: center; 
-  padding: 15px 40px; }
+  padding: 10px 20px; }
 
 .logo { 
     font-size: 1.5rem; 
@@ -53,6 +53,60 @@ nav ul li a {
           justify-content: center; 
             align-items: center; }
 
+.language-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1500;
+}
+
+.language-switcher button {
+  background: #e76f51;
+  color: #000;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.language-switcher button:hover {
+  background: #fff;
+  color: #e76f51;
+}
+
+[data-th], [data-en] {
+  display: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+h1 [data-th], h1 [data-en],
+h2 [data-th], h2 [data-en] {
+  display: inline;
+  text-align: center;
+}
+
+
+.btn [data-th], .btn [data-en],
+.nav-link [data-th], .nav-link [data-en] {
+  display: inline;
+}
+
+  h1 [data-th], h1 [data-en],
+  h2 [data-th], h2 [data-en],
+  p [data-th], p [data-en] {
+    display: inline;
+    text-align: center;
+  }
+
+  .btn [data-th], .btn [data-en],
+  .nav-link [data-th], .nav-link [data-en] {
+    display: inline;
+  }
+
+
 .container { 
   display: flex; 
   justify-content: center; 
@@ -70,7 +124,7 @@ nav ul li a {
 
 .hero-img img { 
   width: 280px; 
-  height: 420px; 
+  height: 480px; 
   object-fit: cover; 
   border-radius: 60% / 60%; 
 }
@@ -84,7 +138,7 @@ nav ul li a {
 }
 
 .hero-text h1 { 
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 
 .hero-text h2 { 
@@ -103,7 +157,7 @@ nav ul li a {
 
 .hero-text p { 
   max-width: 500px; 
-  margin: 10px 0; 
+  margin: 0px 0; 
   color: #ccc; 
 }
 
@@ -161,7 +215,7 @@ nav ul li a {
   color: #e76f51;
   text-align: center;
   line-height: 50px;
-  margin-right: 10px;
+  margin-right: 5px;
   font-size: 1.7rem;
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -172,10 +226,10 @@ nav ul li a {
   box-shadow: 0 6px 12px rgba(231, 111, 81, 0.4);
 }
 .social-links .btn {
-  margin-top: 10px;       /* เว้นช่องด้านบนจากไอคอน */
-  width: auto;            /* ปล่อยความกว้างให้เป็น auto */
-  padding: 6px 20px;      /* ทำให้ปุ่มกระชับ */
-  order: 2;               /* ให้ปุ่มอยู่ต่อท้ายไอคอน */
+  margin-top: 10px;
+  width: auto;
+  padding: 6px 20px;
+  order: 2;
 }
 
 .btn { 
@@ -515,23 +569,23 @@ footer {
 }
 
 nav { 
-  height: 40px; 
+  height: 50px; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  padding: 0 20px; 
+  padding: 0 0px; 
   position: relative; z-index: 1000; 
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   list-style: none;
 }
 
 
 .nav-links li {
-  opacity: 1;                 /* แก้ให้โชว์ตลอดใน desktop */
+  opacity: 1;
   transform: none;
   animation: none;
 }
@@ -599,7 +653,7 @@ nav {
 
 .burger span { 
   display: block; 
-  width: 25px; 
+  width: 30px; 
   height: 3px; 
   background: #fff; 
   border-radius: 3px; 
@@ -648,7 +702,7 @@ nav {
     position: fixed; 
     top: 0; 
     left: -250px; 
-    width: 220px; 
+    width: 240px; 
     height: 100vh; 
     background: #111; 
     flex-direction: column; 
@@ -673,5 +727,3 @@ nav {
     display: none; 
     z-index: 900; 
   }
-
-  

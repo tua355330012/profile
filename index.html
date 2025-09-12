@@ -6,9 +6,9 @@
   <title>Anawat - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="script" href="script.js">
 </head>
 <body>
-
   <div id="preloader">  
     <div class="loader"></div>
   </div>
@@ -16,14 +16,32 @@
   <header>
     <div class="logo">Anawat</div>
     <nav>
-      <ul class="nav-links">
-        <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-        <li><a href="#" class="nav-link" data-section="about">About me</a></li>
-        <li><a href="#" class="nav-link" data-section="services">Services</a></li>
-        <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#" class="nav-link" data-section="education">Education</a></li>
-        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
-      </ul>
+<ul class="nav-links">
+  <li><a href="#" class="nav-link active" data-section="home">
+    <span data-th>หน้าแรก</span>
+    <span data-en>Home</span>
+  </a></li>
+  <li><a href="#" class="nav-link" data-section="about">
+    <span data-th>เกี่ยวกับ<span class="highlight">ฉัน</span></span>
+    <span data-en>About <span class="highlight">Me</span></span>
+  </a></li>
+  <li><a href="#" class="nav-link" data-section="services">
+    <span data-th>บริการ<span class="highlight">ของฉัน</span></span>
+    <span data-en>My <span class="highlight">Services</span></span>
+  </a></li>
+  <li><a href="#" class="nav-link" data-section="skills">
+    <span data-th>ทักษะ<span class="highlight">ของฉัน</span></span>
+    <span data-en>My <span class="highlight">Skills</span></span>
+  </a></li>
+  <li><a href="#" class="nav-link" data-section="education">
+    <span data-th>การศึกษา<span class="highlight">ของฉัน</span></span>
+    <span data-en>My <span class="highlight">Education</span></span>
+  </a></li>
+  <li><a href="#" class="nav-link" data-section="contact">
+    <span data-th>ติดต่อ<span class="highlight">ฉัน</span></span>
+    <span data-en>Contact <span class="highlight">Me</span></span>
+  </a></li>
+</ul>
       <div class="burger">
         <span></span>
         <span></span>
@@ -34,31 +52,53 @@
     <div class="overlay"></div>
 
   <main>
+
+  <div class="language-switcher">
+  <button id="switchLang">EN</button>
+</div>
+
 <section id="home" class="page-section active show">
   <div class="container">
     <div class="hero-img">
     <img src="Fong2.png" alt="Profile">
   </div>
     <div class="hero-text">
-      <h1>Hi, It's <span>Aanawat</span></h1>
-      <h2>I'm a <span>Web Designer</span></h2>
-      <p>passionate about creating modern, user-friendly, and impactful websites.</p>
+<h1>
+  <span data-th>สวัสดี ผม <span class="highlight">อนวัฒน์ เทพนาคิน</span></span>
+  <span data-en>Hi, It's <span class="highlight">Anawat Tapnakin</span></span>
+</h1>
+<h2>
+  <span data-th>ผมคือ <span class="highlight">Web Designer</span></span>
+  <span data-en>I'm a <span class="highlight">Web Designer</span></span>
+</h2>
+<p>
+  <span data-th>หลงใหลในการสร้างเว็บไซต์ที่ทันสมัย ใช้งานง่าย และมีผลลัพธ์ที่ดี</span>
+  <span data-en>Passionate about creating modern, user-friendly, and impactful websites.</span>
+</p>
     <div class="social-links">
         <a href="https://www.facebook.com/vgvsjvh.cfcdc/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="https://www.instagram.com/fonganawat/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="javascript:void(0)" id="openEmailModal"><i class="fas fa-envelope"></i></a>
         <a href="javascript:void(0)" id="openPhone"><i class="fas fa-phone"></i></a>
     </div>
-    <a href="#" class="btn nav-link" data-section="contact">Hire me</a>
-  </div>
+<a href="#" class="btn nav-link" data-section="contact">
+  <span data-th>จ้าง <span class="highlight">ฉัน</span></span>
+  <span data-en>Hire <span class="highlight">Me</span></span>
+</a>
 </div>
 </section>
 
 <div class="modal" id="emailModal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>ติดต่อผมได้ที่</h2>
-        <p>fongfong123gand@gmail.com</p>
+  <span data-th>
+    <p>ติดต่อผมได้ที่</p>
+    fongfong123gand@gmail.com
+  </span>
+  <span data-en>
+  <p>contact</p>
+   fongfong123gand@gmail.com
+  </span>
       </div>
     </div>
     
@@ -66,8 +106,14 @@
     <div class="modal" id="phoneModal">
   <div class="modal-content">
     <span class="close">&times;</span>
-    <h2>โทรหาผมได้ที่</h2>
-    <p>+66 82 442 0838</p>
+  <span data-th>
+  <p>โทรหาผมได้</p>
+  +66 82 442 0838
+  </span>
+  <span data-en>
+  <p>You can call me</p>
+   +66 82 442 0838
+  </span>
   </div>
 </div>
 
@@ -77,46 +123,63 @@
       <img src="Fong1.png" alt="About Me">
     </div>
     <div class="about-text">
-      <h2>เกี่ยวกับฉัน</h2>
-      <p>
-        สวัสดีครับ ผมคือ [อนวัฒน์ เทพนาคิน]  
+<h2>
+  <span data-th>เกี่ยวกับฉัน</span>
+  <span data-en>About Me</span>
+</h2>
+<p>
+  <span data-th>
+            สวัสดีครับผม นายอนวัฒน์ เทพนาคิน  
         เป็นนักพัฒนาเว็บไซต์ที่ชื่นชอบการสร้างงานดีไซน์และฟังก์ชันที่ใช้งานง่าย  
         มีประสบการณ์ทั้งด้าน Frontend และ Backend  
         และกำลังมุ่งเน้นไปที่การทำงานด้าน Full-Stack Developer
-      </p>
-      <p>
-        จุดแข็งของผมคือความสามารถในการเรียนรู้สิ่งใหม่ ๆ  
-        และการแก้ปัญหาอย่างสร้างสรรค์ ✨
-      </p>
-      <h2>About me</h2>
-      <p>
-        Hello! My name is [Anawat Tapnakin], a passionate web developer who loves creating designs with both aesthetic appeal and user-friendly functionality. 
-        I have experience in both Frontend and Backend development, and I am currently focusing on becoming a Full-Stack Developer.
-      </p>
-      <p>
-        My strength lies in my ability to learn new technologies quickly and solve problems creatively, which allows me to build efficient and modern web solutions.
-      </p>
+  </span>
+  <span data-en>
+      Hello! My name is Anawat Tapnakin a passionate web developer who loves creating designs with both aesthetic appeal and user-friendly functionality. 
+      I have experience in both Frontend and Backend development, and I am currently focusing on becoming a Full-Stack Developer.
+  </span>
+</p>
+<p>
+  <span data-th>
+    จุดแข็งของผมคือความสามารถในการเรียนรู้สิ่งใหม่ ๆ และการแก้ปัญหาอย่างสร้างสรรค์ ✨
+  </span>
+  <span data-en>
+    My strength lies in my ability to learn new technologies quickly and solve problems creatively, which allows me to build efficient and modern web solutions.
+  </span>
+</p>
     </div>
   </div>
 </section>
 
     <section id="services" class="page-section">
-  <h1>My <span>Services</span></h1>
+  <h1>
+  <span data-th>บริการของฉัน</span>
+  <span data-en>My services</span>
+</h1>
   <div class="cards">
     <div class="card">
       <i class="fas fa-laptop-code"></i>
-      <h3>Web Design</h3>
-      <p>Modern and responsive websites with stunning UI.</p>
+      <h3><span data-th>การออกแบบเว็บ</h3>
+      <span data-en>Web designs</span>
+      <p>
+        <span data-th>เว็บไซต์ทันสมัยและตอบสนองได้ดีพร้อม UI ที่น่าทึ่ง</p>
+      <span data-en>Modern and responsive websites with stunning UI.</span>
     </div>
     <div class="card">
       <i class="fas fa-pencil-ruler"></i>
-      <h3>UI/UX</h3>
-      <p>User-friendly and creative interfaces for apps and websites.</p>
+      <h3><span data-th>การออกแบบ UI/UX</h3>
+      <span data-en>UI/UX</span>
+      <p>
+        <span data-th>อินเทอร์เฟซที่เป็นมิตรต่อผู้ใช้และสร้างสรรค์สำหรับแอปและเว็บไซต์</p>
+      <span data-en>Modern and responsive websites with stunning UI.</span>
     </div>
     <div class="card">
       <i class="fas fa-code"></i>
-      <h3>Frontend Development</h3>
-      <p>High-performance code using HTML, CSS, and JavaScript.</p>
+      <h3><span data-th>การพัฒนาส่วนหน้า</h3>
+      <span data-en>Frontend Development</span>
+      <p>
+        <span data-th>โค้ดประสิทธิภาพสูงโดยใช้ HTML, CSS และ JavaScript</p>
+      <span data-en>High-performance code using HTML, CSS, and JavaScript.</span>
     </div>
   </div>
 </section>
@@ -130,7 +193,12 @@
     </section>
 
      <section id="skills" class="page-section">
-  <h1>My <span>Skills</span></h1>
+
+
+<h1>
+  <span data-th>ทักษะ <span class="highlight">ของฉัน</span></span>
+  <span data-en>My <span class="highlight">Skills</span></span>
+</h1>
   <ul>
     <li><span>HTML & CSS</span> <span>⭐⭐</span></li>
     <li><span>JavaScript</span> <span>⭐⭐</span></li>
@@ -145,15 +213,28 @@
     </section>
 
      <section id="education" class="page-section">
-  <h1>My <span>Education</span></h1>
+  <h1>
+    <span data-th>
+    การศึกษา <span>ของฉัน</span></h1>
+    </span>
+      <h1>
+    <span data-en>
+    My <span> Education</span></h1>
+    </span>
   <div class="timeline">
     <div class="timeline-item">
-      <h3>Graduated from junior high school</h3>
-      <p>Nong Muang Wittaya School 2019 - 2022</p>
+      <h3><span data-th>จบการศึกษาระดับมัธยมศึกษาตอนต้น </h3>
+      <span data-en>Graduated from junior high school</span>
+      <p>
+        <span data-th>ที่โรงเรียนหนองม่วงวิทยา ปีพ.ศ.2562 - 2565</p>
+      <span data-en>At Nong Muang Witthaya School 2019 - 2022</span>
     </div>
     <div class="timeline-item">
-      <h3>Graduated from high school from</h3>
-      <p>Nong Muang Wittaya School 2022 - 2025</p>
+      <h3><span data-th>จบการศึกษษระดับมัธยมศึกษาตอนปลาย</h3>
+      <span data-en>Graduated from high school from</span>
+      <p>
+        <span data-th>ที่โรงเรียนหนองม่วงวิทยา ปีพ.ศ.2565 - 2568</p>
+      <span data-en>At Nong Muang Witthaya School, 2022 - 2025</span>
     </div>
   </div>
 </section>
@@ -163,7 +244,10 @@
     </section>
 
      <section id="contact" class="page-section">
-  <h1>Contact <span>Me</span></h1>
+  <h1>
+    <span data-th>ติดต่อ <span> ฉัน</span></span>
+    <span data-en>Contact <span> Me</span></span>
+  </h1>
   <form>
     <input type="text" placeholder="Your Name" required>
     <input type="email" placeholder="Your Email" required>
@@ -179,6 +263,7 @@
   enctype="multipart/form-data"
 >
   <label>
+
     Your email:
     <input type="email" name="email">
   </label>
@@ -190,99 +275,6 @@
 </form>
     </section>
   </main>
-
- <script>
-  
-    const links = document.querySelectorAll(".nav-link");
-    const sections = document.querySelectorAll(".page-section");
-
-    links.forEach(link => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = link.getAttribute("data-section");
-
-        sections.forEach(sec => {
-          sec.classList.remove("active", "show");
-        });
-
-        const targetSection = document.getElementById(target);
-        targetSection.classList.add("active");
-        setTimeout(() => targetSection.classList.add("show"), 50);
-
-        links.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-      });
-    });
-    
-    window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      preloader.classList.add("fade-out");
-      setTimeout(() => {
-        preloader.style.display = "none";
-      }, 600);
-    });
-
-const burger = document.querySelector(".burger");
-const navLinks = document.querySelector(".nav-links");
-const overlay = document.querySelector(".overlay");
-const navItems = document.querySelectorAll(".nav-links a");
-
-// เปิด/ปิด เมนู
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-  overlay.style.display = navLinks.classList.contains("active") ? "block" : "none";
-});
-
-// คลิก overlay เพื่อปิด
-overlay.addEventListener("click", () => {
-  burger.classList.remove("active");
-  navLinks.classList.remove("active");
-  overlay.style.display = "none";
-});
-
-// ✅ คลิกเมนู -> ปิดอัตโนมัติ
-navItems.forEach(item => {
-  item.addEventListener("click", () => {
-    burger.classList.remove("active");
-    navLinks.classList.remove("active");
-    overlay.style.display = "none";
-  });
-});
-
-    const emailModal = document.getElementById("emailModal");
-    const openEmail = document.getElementById("openEmailModal");
-    const closeEmail = emailModal.querySelector(".close");
-
-    openEmail.onclick = () => { emailModal.style.display = "flex"; }
-    closeEmail.onclick = () => { emailModal.style.display = "none"; }
-    window.onclick = (event) => {
-      if (event.target === emailModal) emailModal.style.display = "none";
-    }
-
-    const phoneModal = document.getElementById("phoneModal");
-const openPhone = document.getElementById("openPhone");
-const closePhone = phoneModal.querySelector(".close");
-
-// ตรวจสอบอุปกรณ์
-function isMobileDevice() {
-  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-}
-
-openPhone.onclick = () => {
-  if (isMobileDevice()) {
-    // 📱 มือถือ → โทรออก
-    window.location.href = "tel:+66824420838";
-  } else {
-    // 💻 เดสก์ท็อป → เปิด Modal
-    phoneModal.style.display = "flex";
-  }
-}
-
-closePhone.onclick = () => { phoneModal.style.display = "none"; }
-window.onclick = (event) => {
-  if (event.target === phoneModal) phoneModal.style.display = "none";
-}
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
